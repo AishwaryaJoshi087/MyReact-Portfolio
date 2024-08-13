@@ -1,0 +1,304 @@
+/* .work__filters{
+    display: flex;
+    align-items: center;
+    column-gap: 1.875rem;
+    margin-bottom: 2.5rem;
+}
+
+.work__item{
+    cursor: pointer;
+    font-weight: var(--font-bold);
+    transition: .3s;
+}
+
+.work__item:hover{
+    color: var(--first-color);
+
+}
+
+.work__container{
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.875rem;
+}
+
+.work__card{
+    position:relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.work__mask{
+    background: #6c6ce5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: .3s;
+    opacity: 0;
+}
+
+.work__card:hover .work__mask{
+    opacity: 0.89;
+}
+
+.work__category{
+    color: white;
+    background-color: var(--first-color);
+    border-bottom-left-radius: 0.98rem;
+    border-bottom-right-radius: 0.98rem;
+    position:absolute;
+    top: 0;
+    left: 1.5rem;
+    font-size: var(--small-font-size);
+    display: inline-block;
+    padding: 0.19rem 0.625rem;
+    transform: translateY(-40px);
+    transition: .3s;
+}
+
+.work__title{
+    color: white;
+    font-size: var(--h3-font-size);
+    margin: 0 0 0.98rem;
+    padding: 0 1.25rem ;
+    position: absolute;
+    top: 3.75rem;
+    transform: translateY(30px);
+    transition: .3s;
+    opacity: 0;
+
+}
+
+
+.work__button{
+    color: white;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    font-size: var(--h3-font-size);
+    display: block;
+    background-color:#ffd15c;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    transition: .3s;
+    opacity: 0;
+}
+
+.work__card:hover .work__button{
+    opacity: 1;
+}
+
+.work__card:hover .work__title,
+.work__card:hover .work__category{
+    opacity: 1;
+    transform: translateY(0);
+} */
+
+
+
+
+
+.work__card {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.work__description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background: hsla(246, 24%, 26%, 0.666); /* Semi-transparent background */
+    color: #fff;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    opacity: 0; /* Hide description by default */
+    text-align: right; /* Center text */
+    padding: 1.875rem 1.875rem;
+}
+
+.work__card:hover .work__description {
+    transform: translateY(0); /* Show description on hover */
+    opacity: 1; /* Show description */
+}
+
+/* Other CSS rules remain unchanged */
+.work__filters {
+    display: flex;
+    align-items: center;
+    column-gap: 1.875rem;
+    margin-bottom: 2.5rem;
+}
+
+.work__item {
+    cursor: pointer;
+    font-weight: var(--font-bold);
+    transition: .3s;
+}
+
+.work__item:hover {
+    color: var(--first-color);
+}
+
+.work__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.875rem;
+}
+
+.work__card {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.work__mask {
+    background: #f1a74d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: .3s;
+    opacity: 0;
+}
+
+.work__card:hover .work__mask {
+    opacity: 0.89;
+}
+
+.work__category {
+    color: white;
+    background-color: var(--first-color);
+    border-bottom-left-radius: 0.98rem;
+    border-bottom-right-radius: 0.98rem;
+    position: absolute;
+    top: 0;
+    left: 1.5rem;
+    font-size: var(--small-font-size);
+    display: inline-block;
+    padding: 0.19rem 0.625rem;
+    transform: translateY(-40px);
+    transition: .3s;
+}
+
+.work__title {
+    color: white;
+    font-size: var(--h3-font-size);
+    margin: 0 0 0.98rem;
+    padding: 0 1.25rem;
+    position: absolute;
+    top: 3.75rem;
+    transform: translateY(30px);
+    transition: .3s;
+    opacity: 0;
+}
+
+.work__button {
+    color: white;
+    position: absolute;
+    bottom: 0.875rem;
+    left: 0.875rem;
+    font-size: var(--h3-font-size);
+    display: block;
+    background-color: #ffe45c;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    transition: .3s;
+    opacity: 0;
+}
+
+.work__card:hover .work__button {
+    opacity: 1;
+}
+
+.work__card:hover .work__title,
+.work__card:hover .work__category {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Container for work section */
+.work__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.875rem;
+}
+
+/* Adjust grid layout for tablets */
+@media (max-width: 1024px) {
+    .work__container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+        gap: 1.5rem;
+    }
+
+    .work__title {
+        font-size: var(--h4-font-size); /* Adjust title size */
+    }
+
+    .work__button {
+        font-size: var(--normal-font-size); /* Adjust button size */
+    }
+}
+
+/* Adjust grid layout for mobile devices */
+@media (max-width: 768px) {
+    .work__container {
+        grid-template-columns: 1fr 1fr; /* Single column on mobile */
+        gap: 1.25rem;
+    }
+
+    .work__filters {
+        flex-direction: row; /* Stack filters vertically on mobile */
+        align-items: flex-start;
+        row-gap: 1rem; /* Space between filter items */
+    }
+
+    .work__item {
+        font-size: var(--normal-font-size); /* Adjust filter item size */
+    }
+
+    .work__description {
+        font-size: var(--small-font-size); /* Adjust description size */
+        text-align: left; /* Align description text to the left */
+    }
+
+    .work__button {
+        font-size: var(--small-font-size); /* Adjust button size */
+        height: 35px;
+        width: 35px;
+        line-height: 35px;
+    }
+}
+
+/* Adjust for very small screens */
+@media (max-width: 480px) {
+    .work__title {
+        font-size: var(--h5-font-size); /* Smaller title size */
+    }
+
+    .work__description {
+        font-size: var(--small-font-size); /* Smaller description size */
+    }
+
+    .work__button {
+        font-size: var(--smaller-font-size); /* Adjust button size */
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+    }
+}
+

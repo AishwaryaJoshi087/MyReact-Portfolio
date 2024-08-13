@@ -1,0 +1,119 @@
+.certificate__container{
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    column-gap: 1.875rem;
+    row-gap: 1.875rem;
+}
+
+.certificate__item{
+    padding: 1.5rem;
+    background-color: var(--container-color);
+    text-align: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.certificate__item:hover{
+    transform: translateY(-15px);
+    transition: .3s;
+}
+
+.certificate__plan{
+    margin: 1.25rem 0;
+    font-size: var(--h2-font-size);
+}
+
+.certificate__title,
+.certificate__support{
+    margin-bottom: 1rem;
+}
+
+.certficate{
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-bold);
+}
+
+.certificate em{
+    font-style: normal;
+    font-size: var(--small-font-size);
+    margin-right: 0.5rem;
+    vertical-align: super;
+}
+
+.certficate span{
+    font-size: var(--normal-font-size);
+    font-weight: 400;
+    margin-left: 0.75rem;
+}
+
+.certificate__item.btn{
+    margin-top: 1.25rem;
+}
+
+
+.certificate__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    column-gap: 1.875rem;
+    row-gap: 1.875rem;
+}
+
+/* Adjust grid layout for tablets */
+@media (max-width: 1024px) {
+    .certificate__container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+        gap: 1.5rem;
+    }
+
+    .certificate__item {
+        padding: 1.25rem; /* Adjust padding */
+    }
+
+    .certificate__plan {
+        font-size: var(--h3-font-size); /* Adjust plan font size */
+    }
+
+    .certificate__title {
+        font-size: var(--normal-font-size); /* Adjust title font size */
+    }
+}
+
+/* Adjust grid layout for mobile devices */
+@media (max-width: 768px) {
+    .certificate__container {
+        grid-template-columns: 1fr 1fr; /* Single column on mobile */
+        gap: 1.25rem;
+    }
+
+    .certificate__item {
+        padding: 1rem; /* Adjust padding */
+    }
+
+    .certificate__plan {
+        font-size: var(--h4-font-size); /* Adjust plan font size */
+    }
+
+    .certificate__title {
+        font-size: var(--small-font-size); /* Adjust title font size */
+    }
+
+    .certificate__item:hover {
+        transform: translateY(-10px); /* Adjust hover effect */
+    }
+}
+
+/* Adjustments for very small screens */
+@media (max-width: 480px) {
+    .certificate__plan {
+        font-size: var(--h5-font-size); /* Smaller plan font size */
+    }
+
+    .certificate__title {
+        font-size: var(--smaller-font-size); /* Smaller title font size */
+    }
+
+    .certificate__item {
+        padding: 0.75rem; /* Adjust padding */
+    }
+}
